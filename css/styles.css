@@ -1,0 +1,419 @@
+/* ===========================
+   ZELANIX AG. WEBSITE STYLES
+   =========================== */
+
+/* Variables */
+
+:root {
+    --primary: #005A2B;
+    --secondary: #5FAE2E;
+    --accent: #E6A91A;
+    --dark: #1F2937;
+    --light: #F8F9FA;
+    --white: #FFFFFF;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+    background: var(--white);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-light {
+    background: var(--light);
+}
+
+/* Navigation */
+
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 85px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+.active {
+    color: var(--accent);
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 30px;
+}
+
+.btn-nav:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+/* Hero */
+
+/*
+.page-hero {
+    background:
+       
+        url("../images/PEANUT.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+*/
+.hero,
+.page-hero {
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    min-height: 500px;
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.page-hero.fade {
+    opacity: 0;
+}
+
+
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1,
+.page-hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    
+}
+
+.hero p,
+.page-hero  p  {
+    font-size: 1.78rem;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-weight: 2500;
+}
+
+.page-hero {
+    text-align: center;
+    padding: 100px 0;  /*change the size of the banner*/
+    
+}
+
+/* Typography */
+
+.eyebrow {
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    margin-top: 15px;
+    color: var(--primary);
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+/* Cards */
+
+.cards,
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card,
+.industry-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.card:hover,
+.industry-card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3,
+.industry-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Split Layout */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.split img {
+    border-radius: 20px;
+}
+
+/* Services */
+
+.service-block {
+    margin-bottom: 60px;
+}
+
+.service-block h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.service-block ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.service-block li {
+    margin-bottom: 10px;
+}
+
+/* Leadership */
+
+.leader-profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.leader-profile img {
+    border-radius: 20px;
+}
+
+.leader-profile h2 {
+    color: var(--primary);
+}
+
+.leader-profile h4 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+/* Contact */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+.contact-info h4 {
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 60px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+    .split,
+    .leader-profile,
+    .contact-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn-secondary {
+        display: block;
+        margin: 15px 0 0;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
