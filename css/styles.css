@@ -161,6 +161,10 @@ nav a:hover,
     font-weight: bolder;
     font-weight: 2500;
 }
+.profile-image {
+    width: 300px;
+    height: 200px;
+}
 
 .page-hero {
     text-align: center;
