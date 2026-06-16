@@ -1,5 +1,5 @@
 const heroImages = [
-        "images/FT13.jpeg"
+        "images/team3.png"
     
         ];
 
