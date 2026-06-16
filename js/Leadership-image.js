@@ -1,9 +1,8 @@
 const heroImages = [
-        "images/team3.png"
-    
-        ];
+      "images/team3.png"
+     ];
 
-    const hero = document.querySelector(".page-hero");
+     const hero = document.querySelector(".page-hero");
 
     if (hero) {
         let currentIndex = 0;
