@@ -8,6 +8,9 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Contact Zelanix Ag. to discuss field trials, technical development, regulatory support, and agricultural product commercialization.">
+
     <title>Contact | Zelanix Ag.</title>
 
     <link rel="stylesheet"
@@ -29,23 +32,35 @@
 
             </a>
 
-            <nav>
+            <nav aria-label="Primary navigation">
 
                 <ul>
 
-                    <li><a href="index.html">About</a></li>
+                    <li>
+                        <a href="index.html">About</a>
+                    </li>
 
-                    <li><a href="services.html">Services</a></li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
 
-                    <li><a href="industries.html">Industries</a></li>
+                    <li>
+                        <a href="industries.html">Industries</a>
+                    </li>
 
-                    <li><a href="leadership.html">Our Team</a></li>
-<li>
-    <a href="news.html">News</a>
-</li>
-                    <li><a href="contact.html"
-                            class="btn-nav active">Contact</a></li>
-                            
+                    <li>
+                        <a href="leadership.html">Our Team</a>
+                    </li>
+
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                            class="btn-nav active"
+                            aria-current="page">Contact</a>
+                    </li>
 
                 </ul>
 
@@ -55,34 +70,29 @@
 
     </header>
 
-    <!-- <section class="page-hero"> -->
-        <section class="page-hero contact-hero">
+
+    <section class="page-hero contact-hero">
 
         <div class="container">
 
             <span class="eyebrow">
-
                 CONTACT US
-
             </span>
 
             <h1>
-
                 Let's Accelerate Your Innovation
-
             </h1>
 
             <p>
-
                 Whether you need field development support,
                 technical leadership, or scientific advisory
                 services, Zelanix Ag. is ready to help.
-
             </p>
 
         </div>
 
     </section>
+
 
     <section class="section">
 
@@ -91,59 +101,116 @@
             <div>
 
                 <h2>
-
                     Get in Touch
-
                 </h2>
 
                 <p>
-
-                    At Zelanix Ag., we design and execute high-quality field trials that generate decision-ready data to support product development, regulatory advancement, and successful commercialization. Complete this form, and our team will contact you to discuss your field research needs.
-
+                    At Zelanix Ag., we design and execute high-quality field
+                    trials that generate decision-ready data to support product
+                    development, regulatory advancement, and successful
+                    commercialization. Complete this form, and our team will
+                    contact you to discuss your field research needs.
                 </p>
 
                 <div class="contact-info">
 
-                    
-
                     <h4>
-
                         Email
-
                     </h4>
 
                     <p>
-
-                        wiseborn.danquah@zelanixag.com
-
+                        <a href="mailto:wiseborn.danquah@zelanixag.com">
+                            wiseborn.danquah@zelanixag.com
+                        </a>
                     </p>
-
-                    
 
                 </div>
 
             </div>
 
+
             <div>
 
-                <form class="contact-form" >
+                <!--
+                    FORM SETUP REQUIRED:
 
-                    <input type="text"
+                    1. Create a form in your Formspree account.
+                    2. Copy the endpoint shown by Formspree.
+                    3. Replace YOUR_FORM_ID below with your actual form ID.
+
+                    Example:
+                    https://formspree.io/f/abcdwxyz
+                -->
+
+                <form
+                    action="https://formspree.io/f/mojzrloz"
+                    method="POST"
+                    accept-charset="UTF-8"
+                    class="contact-form">
+
+                    <!-- Sets the subject of the notification email -->
+                    <input
+                        type="hidden"
+                        name="subject"
+                        value="New Zelanix Ag Website Inquiry">
+
+                    <!-- Honeypot field for basic spam filtering -->
+                    <input
+                        type="text"
+                        name="_gotcha"
+                        tabindex="-1"
+                        autocomplete="off"
+                        style="display: none;"
+                        aria-hidden="true">
+
+                    <label for="contact-name">
+                        Your Name
+                    </label>
+
+                    <input
+                        id="contact-name"
+                        type="text"
+                        name="name"
                         placeholder="Your Name"
+                        autocomplete="name"
                         required>
 
-                    <input type="email"
+                    <label for="contact-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        id="contact-email"
+                        type="email"
+                        name="email"
                         placeholder="Email Address"
+                        autocomplete="email"
                         required>
 
-                    <input type="text"
-                        placeholder="Company">
+                    <label for="contact-company">
+                        Company
+                    </label>
 
-                    <textarea rows="6"
-                        placeholder="How can we help?"
+                    <input
+                        id="contact-company"
+                        type="text"
+                        name="company"
+                        placeholder="Company"
+                        autocomplete="organization">
+
+                    <label for="contact-message">
+                        How can we help?
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell us about your field research or product development needs"
                         required></textarea>
 
-                    <button type="submit"
+                    <button
+                        type="submit"
                         class="btn-primary">
 
                         Submit Inquiry
@@ -152,24 +219,20 @@
 
                 </form>
 
-
-  
-
             </div>
 
         </div>
 
     </section>
 
+
     <section class="cta">
 
         <div class="container">
 
             <h2>
-
                 Science in the Field.
                 Solutions that Grow.
-
             </h2>
 
             <a href="services.html"
