@@ -2,7 +2,10 @@
    ZELANIX AG. WEBSITE STYLES
    =========================== */
 
-/* Variables */
+
+/* ===========================
+   VARIABLES
+   =========================== */
 
 :root {
     --primary: #005A2B;
@@ -11,15 +14,24 @@
     --dark: #1F2937;
     --light: #F8F9FA;
     --white: #FFFFFF;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --border: #E3E8E4;
+    --muted: #66736A;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Reset */
+
+/* ===========================
+   RESET
+   =========================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -42,7 +54,10 @@ ul {
     list-style: none;
 }
 
-/* Layout */
+
+/* ===========================
+   LAYOUT
+   =========================== */
 
 .container {
     width: 90%;
@@ -58,14 +73,17 @@ ul {
     background: var(--light);
 }
 
-/* Navigation */
+
+/* ===========================
+   NAVIGATION
+   =========================== */
 
 header {
     background: var(--white);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
 }
 
 .navbar {
@@ -88,11 +106,11 @@ nav ul {
 nav a {
     color: var(--primary);
     font-weight: 600;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover,
-.active {
+nav a.active {
     color: var(--accent);
 }
 
@@ -108,19 +126,11 @@ nav a:hover,
     color: var(--white);
 }
 
-/* Hero */
 
-/*
-.page-hero {
-    background:
-       
-        url("../images/PEANUT.jpeg");
+/* ===========================
+   HERO
+   =========================== */
 
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-}
-*/
 .hero,
 .page-hero {
     background-size: cover;
@@ -135,8 +145,6 @@ nav a:hover,
     opacity: 0;
 }
 
-
-
 .hero {
     min-height: 90vh;
     display: flex;
@@ -150,29 +158,83 @@ nav a:hover,
 .hero h1,
 .page-hero h1 {
     font-size: 4.5rem;
+    line-height: 1.15;
     margin-bottom: 20px;
-    
 }
 
 .hero p,
-.page-hero  p  {
+.page-hero p {
     font-size: 1.78rem;
     margin-bottom: 30px;
-    font-weight: bolder;
-    font-weight: 2500;
+    font-weight: 700;
 }
+
 .profile-image {
     width: 300px;
-    height:300px;
+    height: 300px;
 }
 
 .page-hero {
     text-align: center;
-    padding: 100px 0;  /*change the size of the banner*/
-    
+    padding: 100px 0;
 }
 
-/* Typography */
+.page-hero .container {
+    max-width: 1000px;
+}
+
+
+/* ===========================
+   NEWS PAGE HERO
+   =========================== */
+
+/*
+   The News hero currently uses:
+   images/INSEC.jpg
+
+   Because this stylesheet is inside the css folder, the image path
+   begins with ../images/
+*/
+
+.news-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 60, 30, 0.62),
+            rgba(0, 60, 30, 0.62)
+        ),
+        url("../images/INSEC.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.news-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+}
+
+.news-hero h1,
+.news-hero p {
+    color: var(--white);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
 
 .eyebrow {
     color: var(--secondary);
@@ -181,17 +243,33 @@ nav a:hover,
     text-transform: uppercase;
 }
 
-.section-header {
+.section-header,
+.section-heading {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.section-header h2 {
+.section-header h2,
+.section-heading h2 {
     margin-top: 15px;
+    margin-bottom: 15px;
     color: var(--primary);
 }
 
-/* Buttons */
+.section-heading {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading p {
+    color: var(--dark);
+}
+
+
+/* ===========================
+   BUTTONS
+   =========================== */
 
 .btn-primary,
 .btn-secondary {
@@ -199,7 +277,10 @@ nav a:hover,
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
-    transition: 0.3s;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .btn-primary {
@@ -222,7 +303,10 @@ nav a:hover,
     color: var(--primary);
 }
 
-/* Cards */
+
+/* ===========================
+   CARDS
+   =========================== */
 
 .cards,
 .industry-grid {
@@ -237,7 +321,7 @@ nav a:hover,
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow);
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .card:hover,
@@ -251,7 +335,10 @@ nav a:hover,
     margin-bottom: 15px;
 }
 
-/* Split Layout */
+
+/* ===========================
+   SPLIT LAYOUT
+   =========================== */
 
 .split {
     display: grid;
@@ -264,7 +351,10 @@ nav a:hover,
     border-radius: 20px;
 }
 
-/* Services */
+
+/* ===========================
+   SERVICES
+   =========================== */
 
 .service-block {
     margin-bottom: 60px;
@@ -284,7 +374,10 @@ nav a:hover,
     margin-bottom: 10px;
 }
 
-/* Leadership */
+
+/* ===========================
+   LEADERSHIP
+   =========================== */
 
 .leader-profile {
     display: grid;
@@ -306,7 +399,72 @@ nav a:hover,
     margin-bottom: 20px;
 }
 
-/* Contact */
+
+/* ===========================
+   NEWS PAGE
+   =========================== */
+
+/*
+   The News page currently contains one image-only news item.
+
+   Expected HTML classes:
+   .news-list
+   .news-image-item
+   .news-image-link
+   .news-article-image
+*/
+
+.news-list {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Container for the single news image */
+
+.news-image-item {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.news-image-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Makes the entire news image clickable */
+
+.news-image-link {
+    display: block;
+    width: 100%;
+}
+
+/* The news article itself is displayed as an image */
+
+.news-article-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.news-image-item:hover .news-article-image {
+    transform: scale(1.015);
+}
+
+
+/* ===========================
+   CONTACT
+   =========================== */
 
 .contact-grid {
     display: grid;
@@ -324,8 +482,15 @@ nav a:hover,
 .contact-form textarea {
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #D1D5DB;
+    font-family: inherit;
     font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
 }
 
 .contact-form button {
@@ -338,7 +503,10 @@ nav a:hover,
     margin-top: 20px;
 }
 
-/* CTA */
+
+/* ===========================
+   CALL TO ACTION
+   =========================== */
 
 .cta {
     background: var(--primary);
@@ -352,10 +520,14 @@ nav a:hover,
 }
 
 .cta p {
-    margin-bottom: 30px;
+    max-width: 760px;
+    margin: 0 auto 30px;
 }
 
-/* Footer */
+
+/* ===========================
+   FOOTER
+   =========================== */
 
 footer {
     background: var(--dark);
@@ -374,7 +546,10 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Responsive */
+
+/* ===========================
+   RESPONSIVE: TABLETS
+   =========================== */
 
 @media (max-width: 992px) {
 
@@ -385,11 +560,35 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .leader-profile {
+        text-align: center;
+    }
+
+    .leader-profile img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
     .hero h1,
     .page-hero h1 {
         font-size: 2.5rem;
     }
+
+    .hero p,
+    .page-hero p {
+        font-size: 1.35rem;
+    }
+
+
+    .news-hero {
+        min-height: 420px;
+    }
 }
+
+
+/* ===========================
+   RESPONSIVE: MOBILE
+   =========================== */
 
 @media (max-width: 768px) {
 
@@ -398,18 +597,44 @@ footer {
         gap: 20px;
     }
 
+    .logo img {
+        height: 70px;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 15px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
     }
 
     .hero {
         min-height: 70vh;
     }
 
+    .page-hero {
+        min-height: 400px;
+        padding: 70px 0;
+    }
+
+
+    .news-hero {
+        min-height: 350px;
+        padding: 70px 0;
+        background-position: center;
+    }
+
     .hero h1,
     .page-hero h1 {
         font-size: 2rem;
+    }
+
+    .hero p,
+    .page-hero p {
+        font-size: 1.15rem;
     }
 
     .btn-secondary {
@@ -419,5 +644,63 @@ footer {
 
     .section {
         padding: 70px 0;
+    }
+
+    .section-header,
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .news-list {
+        max-width: 100%;
+    }
+
+    .news-image-item {
+        border-radius: 10px;
+    }
+
+
+    .cta {
+        padding: 70px 0;
+    }
+}
+
+
+/* ===========================
+   RESPONSIVE: SMALL PHONES
+   =========================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .page-hero {
+        min-height: 350px;
+    }
+
+
+    .news-hero {
+        min-height: 320px;
+        padding: 60px 0;
+    }
+
+
+    .news-image-item {
+        border-radius: 8px;
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 }
