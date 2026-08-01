@@ -465,6 +465,30 @@ nav a.active {
 /* ===========================
    CONTACT
    =========================== */
+   .contact-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+
+    /* Green fallback if the image cannot load */
+    background-color: var(--primary);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 60, 30, 0.66),
+            rgba(0, 60, 30, 0.66)
+        ),
+        url("../images/GR1.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
 
 .contact-grid {
     display: grid;
