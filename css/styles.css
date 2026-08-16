@@ -551,7 +551,7 @@ p + p { margin-top: 1rem; }
 /* Footer */
 .site-footer { background: #17211b; color: rgba(255,255,255,.82); padding: 4rem 0 1.2rem; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .65fr .85fr; gap: 3rem; }
-.footer-logo { height: 70px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+.footer-logo { height: 70px; width: auto; filter: none; margin-bottom: 1rem; }
 .footer-heading { color: var(--white); font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; }
 .footer-links { list-style: none; padding: 0; }
 .footer-links li { margin: .35rem 0; }
